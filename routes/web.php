@@ -139,5 +139,13 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
     Route::resource("$module_name", "$controller_name");
     Route::patch("$module_name/{id}/block", ['as' => "$module_name.block", 'uses' => "$controller_name@block", 'middleware' => ['permission:block_users']]);
     Route::patch("$module_name/{id}/unblock", ['as' => "$module_name.unblock", 'uses' => "$controller_name@unblock", 'middleware' => ['permission:block_users']]);
+<<<<<<< HEAD
    
+=======
+
+   
+    Route::get('filemanager', function (){
+        return view('backend.filemanager.index');
+    })->name('filemanager');
+>>>>>>> 46885598ebdd672039131ad2bfe6309d6b345f64
 });
